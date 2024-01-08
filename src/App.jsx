@@ -63,8 +63,10 @@ function App() {
           <Navbar setIsNotification={setIsNotification} isNotification={isNotification} />
         </div>
 
-        <div className={`w-[100vw] h-[100vh] bg-[#000000b1] absolute top-0 left-0 z-[99] backdrop-blur-[5px] ${isCustomSec ? 'block' : 'hidden'}`}>
-          <CustomSecond second={second} setSecond={setSecond} setIsCustomSec={setIsCustomSec} setIsEnter={setIsEnter} setIsTimer={setIsTimer} />
+        <div onClick={() => { setIsCustomSec(false); setIsEnter(false) }} className={`w-[100vw] h-[100vh] bg-[#000000b1] absolute top-0 left-0 z-[99] backdrop-blur-[5px] ${isCustomSec ? 'block' : 'hidden'}`}>
+        </div>
+        <div className={`absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] z-[999] ${isCustomSec ? 'block' : 'hidden'}`}>
+        <CustomSecond second={second} setSecond={setSecond} setIsCustomSec={setIsCustomSec} setIsEnter={setIsEnter} setIsTimer={setIsTimer} />
         </div>
 
         <div onClick={() => setIsNotification(!isNotification)} className={`min-w-[100vw] min-h-[100vh] absolute top-0 left-0 duration-300 backdrop-blur-[5px] ease-linear bg-[#0000008d] ${isNotification ? 'opacity-1 z-[95]' : 'opacity-0 -z-[99]'}`} />
