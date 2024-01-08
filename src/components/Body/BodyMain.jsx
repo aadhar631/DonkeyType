@@ -354,14 +354,14 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     const unwantedKeys = ["Backspace", "Alt", "Shift", "Tab", "Escape", "Control"];
 
     // ... (previous code)
-    if(pressedKey === 'Enter' && !isFirstStart && isTimer){
-      setIsEnter(true)
-    }
+    // if(pressedKey === 'Enter' && !isFirstStart && isTimer){
+    //   setIsEnter(true)
+    // }
 
     if (
       !unwantedKeys.includes(pressedKey) &&
       (/[a-zA-Z]/.test(pressedKey) || /\d/.test(pressedKey) || /[!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~\s]/.test(pressedKey)) &&
-      pressedKey !== "Enter"
+      pressedKey !== "Enter" && inputRef.current.readOnly == false
     ) {
       setLastTypedChar(pressedKey);
       setInputValue((prevInputValue) => prevInputValue + pressedKey);
@@ -371,6 +371,8 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     } else if (event.keyCode === 13 && !isFirstStart && isTimer) {
       setIsFirstStart(true);
       startTimer();
+      setIsEnter(true)
+      inputRef.current.readOnly = false;
     } else if (event.keyCode === 8) {
       const inputValue = inputRef.current.value;
       setLastTypedChar(inputValue.slice(-1));
@@ -456,6 +458,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
         className="input-field invisible absolute z-[-99]"
         onKeyDown={isEsc && !isEnter ? null : handleKeyDown}
         value={inputValue}
+        readOnly={!isTimer || completed}
       />
       <div className={`text-[#e2b714] font-medium ${countDown > 0 && isFirstStart ? "block" : "hidden"}`}>
         <h1 className="text-xl">{countDown}</h1>
