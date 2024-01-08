@@ -12,6 +12,7 @@
         const totalCharCount = correctCharCount + incorrectCharCount;
         const elapsedMinutes = Math.floor(isTimer / 60);
         const wpm = Math.floor((correctCharCount / 5) / (elapsedMinutes === 0 ? 1 : elapsedMinutes)) || 0;
+        const iwpm = Math.floor((incorrectCharCount / 5) / (elapsedMinutes === 0 ? 1 : elapsedMinutes)) || 0;
         const accuracy = Math.floor((correctCharCount / (totalCharCount)) * 100) || 0;
         const consistency = Math.floor((correctCharCount / (incorrectCharCount === 0 ? totalCharCount : totalCharCount + incorrectCharCount)) * 100) || 0;
 
@@ -53,7 +54,7 @@
                     </div>
                     <div className="group raw">
                         <div className="top">raw</div>
-                        <div className="bottom size">{correctCharCount}</div>
+                        <div className="bottom size">{wpm - iwpm}</div>
                     </div>
                     <div className="group characters">
                         <div className="top">characters</div>

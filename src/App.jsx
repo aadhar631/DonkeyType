@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar"
 import EscButton from "./components/Body/EscButton"
 import NotificationBar from "./components/Body/NotificationBar"
 import CustomSecond from "./components/Body/CustomSecond"
-import Result from "./Components/Body/Result"
+import Result from "./components/Body/Result"
 
 function App() {
 

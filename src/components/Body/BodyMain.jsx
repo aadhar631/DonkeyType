@@ -253,11 +253,11 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
   const [cursorPosition, setCursorPosition] = useState(0);
 
   const startTimer = useCallback(() => {
-    console.log("first");
+    // console.log("first");
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCountDown((prevCountDown) => {
-        if (prevCountDown === 0) {
+        if (prevCountDown === 1) {
           clearInterval(intervalRef.current);
           setCompleted(true);
           return 0;
@@ -266,7 +266,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
         }
       });
     }, 1000);
-    console.log("logs");
+    // console.log("last");
   }, []);
 
   useEffect(() => {
@@ -302,7 +302,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
   
 
   useEffect(() => {
-    console.log("input value", inputValue);
+    // console.log("input value", inputValue);
   
     if (countDown === 1) {
         let correctCount = 0;
@@ -315,7 +315,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
           const inputChar = inputValue[charIndex];
           const isCharCorrect = paraChar === inputChar;
   
-          console.log(`Character ${charIndex}:`, isCharCorrect ? "correct" : "incorrect");
+          // console.log(`Character ${charIndex}:`, isCharCorrect ? "correct" : "incorrect");
   
           if (isCharCorrect) {
             correctCount++;
@@ -324,11 +324,9 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
           }
         }
   
-        console.log("Correct Count:", correctCount);
-        console.log("Incorrect Count:", incorrectCount);
-      }
-  
-      if (completed || inputValue.length === para.length) {
+        // console.log("Correct Count:", correctCount);
+        // console.log("Incorrect Count:", incorrectCount);
+    
         const wordsTyped = inputValue.split(/\s+/); // Split on any whitespace character
         const wordsInPara = para.split(/\s+/);
   
@@ -343,8 +341,8 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
           }
         }
   
-        console.log("Correct Word Count:", correctWords);
-        console.log("Incorrect Word Count:", incorrectWords);
+        // console.log("Correct Word Count:", correctWords);
+        // console.log("Incorrect Word Count:", incorrectWords);
       }
       onCompletion(true, correctCount, incorrectCount);
     }
