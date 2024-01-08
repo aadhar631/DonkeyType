@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@font-face {
+  font-family: Roboto;
+  src: url(./assets/fonts/RobotoMono-Regular.ttf);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.icons {
+  width: 20px;
+  height: 20px;
+}
+
+.spin::-webkit-inner-spin-button {
+  display: none;
+}
+
+@keyframes ping {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-ping {
+  animation: ping 1s 1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; /* Add animation property */
+}
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.words-wrapper {
+  width: 80vw; /* 80% of viewport width */
+  overflow: hidden; /* or scroll/auto based on your design */
+}
+
+.overfl {
+  overflow-wrap: break-word; /* or word-wrap: break-word; */
+}
+
+.colorless {
+  color: #646669;
+}
+
+.correct-char {
+  color: white;
+}
+
+.incorrect-char {
+  color: red;
+}
+.blinking-cursor {
+  animation: blinkCursor 3s infinite;
+}
+
+.active-char {
+  border-right: 2px solid #ffff00; /* Set the border color for the active character */
+  animation: blinkBorder 0.8s infinite;
+}
+
+@keyframes blinkBorder {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blinkCursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+
+
+
+
+
+/* result css  */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  color: #5e6063;
+}
+
+.bottom {
+  color: #e2b714;
+}
+
+.size {
+  font-size: xx-large;
+}
+
+.login {
+  border-bottom: 1px solid #5e6063;
+}
