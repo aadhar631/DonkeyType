@@ -351,7 +351,9 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
 
   const handleKeyDown = (event) => {
     const pressedKey = event.key;
-    const unwantedKeys = ["Backspace", "Alt", "Shift", "Tab", "Escape", "Control"];
+    // console.log(pressedKey);
+    const unwantedKeys = ["Backspace", "CapsLock", "Alt", "Shift", "Tab", "Escape", "Control", "NumLock", "AltGraph", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "Insert", "Delete", "PageUp", "PageDown", "MediaPlayPause", "MediaTrackNext", "MediaTrackPrevious", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "Meta", "Unidentified"];
+
 
     // ... (previous code)
     // if(pressedKey === 'Enter' && !isFirstStart && isTimer){
