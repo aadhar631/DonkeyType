@@ -8,10 +8,12 @@ const Footer = ({ darkTheme, setDarkTheme }) => {
   return (
     <div className="w-full flex items-center justify-between" >
       <div className="flex items-center justify-center">
+        <a href="https://aadhar631.github.io/aadhar-portfolio/" target="_blank">
         <div className="flex justify-center items-center text-[#646669] hover:text-black dark:hover:text-white cursor-pointer transition-all ease-in-out duration-500">
           <IoMail className='text-[15px]' />
           <h1 className="ml-[5px] text-[15px]">Contact</h1>
         </div>
+        </a>
 
         <div className="flex justify-center items-center ml-[15px] text-[#646669] hover:text-black dark:hover:text-white cursor-pointer transition-all ease-in-out duration-500">
           <MdContactSupport className='text-[15px]' />
