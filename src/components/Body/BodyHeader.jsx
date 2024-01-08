@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { IoTime } from "react-icons/io5";
 import { HiMiniWrenchScrewdriver } from "react-icons/hi2";
+import { BiSolidQuoteLeft } from "react-icons/bi";
+import { BsTriangleHalf } from "react-icons/bs";
 
 const BodyHeader = ({ isNumber, setIsNumber, isPunctuation, setIsPunctuation, setIsTimer, setIsFirstStart, isCustomSec, setIsCustomSec, setIsEnter, second }) => {
 
@@ -51,6 +53,26 @@ const BodyHeader = ({ isNumber, setIsNumber, isPunctuation, setIsPunctuation, se
         <div className={`flex items-center cursor-pointer font-medium text-[#e2b714] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
           <h1 className="" ><IoTime /></h1>
           <h1 className="font-poppins ml-[5px]" >time</h1>
+        </div>
+
+        <div className={`flex items-center cursor-pointer font-medium text-[#646669] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
+          <h1 className="" >A</h1>
+          <h1 className="font-poppins ml-[5px]" >words</h1>
+        </div>
+
+        <div className={`flex items-center cursor-pointer font-medium text-[#646669] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
+          <h1 className="" ><BiSolidQuoteLeft /></h1>
+          <h1 className="font-poppins ml-[5px]" >quote</h1>
+        </div>
+
+        <div className={`flex items-center cursor-pointer font-medium text-[#646669] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
+          <h1 className="" ><BsTriangleHalf /></h1>
+          <h1 className="font-poppins ml-[5px]" >zen</h1>
+        </div>
+
+        <div className={`flex items-center cursor-pointer font-medium text-[#646669] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
+          <h1 className="text-[13px]" ><HiMiniWrenchScrewdriver /></h1>
+          <h1 className="font-poppins ml-[5px]" >custom</h1>
         </div>
 
         <div className={`flex items-center cursor-pointer font-medium text-[#646669] hover:text-black dark:hover:text-white ease-in-out duration-500`}>
