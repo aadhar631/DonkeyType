@@ -10,12 +10,12 @@
 
     const Result = ({correctCharCount, incorrectCharCount, isTimer, setIsTimer, isNumber, isPunctuation, setCompleted}) => {
         const totalCharCount = correctCharCount + incorrectCharCount;
-        const elapsedMinutes = Math.floor(isTimer / 60);
+        const elapsedMinutes = isTimer / 60;
         const wpm = Math.floor((correctCharCount / 5) / (elapsedMinutes === 0 ? 1 : elapsedMinutes)) || 0;
         const iwpm = Math.floor((incorrectCharCount / 5) / (elapsedMinutes === 0 ? 1 : elapsedMinutes)) || 0;
         const accuracy = Math.floor((correctCharCount / (totalCharCount)) * 100) || 0;
         const consistency = Math.floor((correctCharCount / (incorrectCharCount === 0 ? totalCharCount : totalCharCount + incorrectCharCount)) * 100) || 0;
-
+        
         return (
             <div className="font-Roboto total-result w-full bg-transparent flex flex-col gap-7">
                 <div className="result flex gap-10">

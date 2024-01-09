@@ -6,6 +6,7 @@ import { IoInformation } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
 import { PiBellRingingFill } from "react-icons/pi";
 import { IoPersonOutline } from "react-icons/io5";
+import logo from '../assets/images/logo6_adobe.jpg'
 
 
 function Navbar({ isNotification, setIsNotification }) {
@@ -13,7 +14,8 @@ function Navbar({ isNotification, setIsNotification }) {
         <div className='w-[100%] flex items-center'>
             <a href="/" className='flex gap-3 cursor-pointer'>
                 <div className="icon items-center">
-                    <GiAbstract049 style={{ width: '30px', height: '50px', color: '#E2B714' }} />
+                    {/* <GiAbstract049 style={{ width: '30px', height: '50px', color: '#E2B714' }} /> */}
+                    <img src={logo} alt="logo" className='w-[50px] h-[50px] rounded-3xl'/>
                 </div>
 
                 <h1 className="text relative flex items-center text-3xl dark:text-[#d1d0c5] text-black">
