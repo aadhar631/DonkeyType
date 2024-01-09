@@ -3,76 +3,53 @@ import { TiWorld } from "react-icons/ti";
 import { IoMdRefresh } from "react-icons/io";
 
 const wordParagraphs = [
-    "A forest lush with greenery, teeming with life, and resonating with the chirping of birds and rustling of leaves is a sanctuary for nature lovers. Hiking trails wind through the dense foliage, revealing hidden clearings and babbling brooks.",
-    "The meandering river flows gently, reflecting the azure sky above. Trees stand tall, their branches forming a natural canopy that filters sunlight, creating a serene ambiance below.",
-    "In the heart of the wilderness, flora and fauna coexist in perfect harmony. Deer graze peacefully in the meadows, while squirrels dart between branches, collecting nuts for the approaching winter.",
-    "Moss-covered rocks line the riverbanks, and wildflowers add vibrant splashes of color to the landscape. Nature's palette is on full display, showcasing hues of green, brown, and the occasional burst of red or purple.",
-    "The air is filled with the sweet scent of blooming flowers and the earthy aroma of the forest floor. Each step on the soft soil is a connection to the ancient rhythm of nature, a dance that has played out for centuries.",
-    "Birdsong becomes a symphony, with different species contributing their unique melodies. The harmony of the natural world is a soothing balm for the weary soul, offering a retreat from the hustle and bustle of modern life.",
-    "As the sun sets, the forest transforms into a magical realm. Fireflies twinkle like stars, and the night is alive with the calls of nocturnal creatures. The moonlight filters through the trees, casting enchanting shadows on the ground.",
-    "For those who seek solace in the embrace of nature, the forest is a sanctuary that provides not only beauty but also a profound sense of connection to the planet we call home.",
-    "The ancient oak trees, with their gnarled branches and thick trunks, stand as silent witnesses to the passage of time. Each ring within their bark tells a story, a chronicle of years gone by.",
-    "The whispering wind carries tales of the past, and the leaves that carpet the forest floor are like pages from a forgotten book. Nature is a storyteller, and those who listen can hear the echoes of bygone eras.",
-    "Mushrooms dot the landscape, their caps displaying an array of shapes and colors. They are like tiny sentinels, guardians of the secrets hidden beneath the soil.",
-    "Rays of sunlight filter through the canopy, creating dappled patterns on the ground. It's a dance of light and shadow, a visual symphony that unfolds with the changing angles of the sun.",
-    "A babbling brook meanders through the heart of the forest, its crystal-clear waters reflecting the surrounding greenery. Stones beneath the surface form a mosaic, and aquatic plants sway gently in the current.",
-    "The forest beckons explorers to wander its winding trails, to discover the wonders that lie hidden around every bend. It is a place of mystery and discovery, where the curious are rewarded with glimpses of nature's marvels.",
-    "In the stillness of dawn, the forest is draped in a delicate mist. The world awakens with the soft rustle of leaves and the first calls of awakening birds.",
-    "As the day progresses, the forest comes alive with activity. Squirrels scurry up tree trunks, and birds flit from branch to branch, their feathers creating flashes of color against the green backdrop.",
-    "Wildflowers carpet the meadows, creating a patchwork quilt of colors. Bees buzz from blossom to blossom, collecting nectar to sustain their hive.",
-    "The canopy above is a mosaic of leaves, filtering the sunlight into a gentle, golden glow. It's a cathedral of nature, where every rustle and chirp is a hymn to the beauty of the world.",
-    "At twilight, the forest takes on a different character. Shadows lengthen, and the symphony of daytime gives way to the nocturnal serenade. Owls hoot in the distance, and the moon casts an ethereal glow.",
-    "Under the moonlight, the forest becomes a realm of dreams. Creatures of the night emerge from their hiding places, adding an air of enchantment to the already magical landscape.",
-    "The rustling leaves and the croaking of frogs create a lullaby that serenades the forest to sleep. It's a timeless cycle, a dance of nature that continues unabated.",
-    "The stars twinkle overhead, and the forest, now bathed in moonlight, is a tranquil sanctuary. It's a place where the beauty of the natural world takes center stage, inviting all who enter to become part of its timeless story.",
-    "A stroll through this enchanted forest is a journey through time, a communion with the earth's ancient spirit. It's a reminder that, in the midst of our modern lives, the heartbeat of nature continues to echo, steady and enduring.",
-    "As the sun rises once more, casting its warm rays upon the treetops, the forest awakens to a new day. The cycle begins anew, and the symphony of nature plays on.",
-    "The rustle of leaves, the call of distant birds, and the gentle gurgle of the brook create a soundtrack that accompanies every step. It's a melody that speaks to the soul, a song of the wild.",
-    "Among the towering trees and the vibrant undergrowth, every creature plays a role in the intricate tapestry of life. From the smallest insects to the majestic deer, each contributes to the harmony of the ecosystem.",
-    "The forest, with its myriad shades of green and the soft carpet of fallen leaves, is a sanctuary for contemplation. It's a place where the mind finds respite from the noise of the world, and the heart beats in sync with the rhythm of nature.",
-    "Moss-covered rocks, adorned with delicate ferns, add to the enchantment. They are like stepping stones in a magical realm, inviting explorers to traverse the landscape with wonder-filled eyes.",
-    "The air is cool and crisp, scented with the fragrance of pine and earth. It's a perfume that lingers in the memory, a reminder of the simple joys found in the embrace of the great outdoors.",
-    "The forest floor, with its patches of sunlight and shadows, is a canvas for the intricate dance of life. Insects scuttle about, and the occasional rustle betrays the presence of unseen creatures.",
-    "As the day draws to a close, the canopy above becomes a canvas painted with the hues of sunset. It's a breathtaking display, a celebration of nature's artistry that leaves observers in awe.",
-    "Underneath the fading light, nocturnal creatures begin their nightly rituals. The forest, now draped in a cloak of darkness, takes on an air of mystery and intrigue.",
-    "The hoot of an owl and the distant howl of a wolf add to the symphony of the night. It's a reminder that, even in the stillness, the forest is very much alive.",
-    "As the stars emerge in the velvet sky, the forest becomes a celestial theater. The Milky Way stretches across the heavens, and constellations tell stories written in the stars.",
-    "In this nocturnal wonderland, the rustling leaves and the gentle murmur of the brook create a soothing lullaby. It's a melody that serenades the forest to sleep, wrapping it in a blanket of tranquility.",
-    "With each passing moment, the forest undergoes a subtle transformation. The night unfolds its mysteries, and the ancient trees stand as silent sentinels, guardians of the secrets held within their gnarled bark.",
-    "The cycle repeats, a timeless dance that has played out for eons. The forest, with its ever-changing tapestry of life, remains a sanctuary for those who seek solace in the embrace of nature.",
-    "As dawn breaks once more, painting the sky in shades of pink and gold, the forest awakens to a new day. The symphony begins anew, and the dance of life continues in this enchanted realm.",
-    "With each step through the forest, a profound connection to the natural world is forged. It's a pilgrimage to a sacred space where the spirit finds renewal and the soul finds its song.",
-    "The forest, with its towering trees and delicate ferns, is a cathedral of green. Sunlight filters through the leaves, creating a soft glow that bathes the surroundings in a warm embrace.",
-    "Trails wind through the undergrowth, inviting exploration. Each bend in the path reveals new wonders, from hidden clearings bathed in sunlight to secluded groves where time seems to stand still.",
-    "The scent of earth and moss permeates the air, grounding those who venture into this sanctuary. It's an aroma that speaks of the earth's ancient wisdom, a fragrance that whispers of the cycles of life.",
-    "As the wind rustles through the leaves, it carries with it the stories of the forest. It's a storyteller that weaves tales of seasons past, of creatures that roamed, and of the ever-changing landscape.",
-    "In the heart of the forest, a tranquil pond reflects the surrounding greenery. Lily pads float on the water's surface, and dragonflies flit about, their iridescent wings catching the sunlight.",
-    "The pond is a mirror, capturing the essence of the forest in its still waters. It's a place of reflection, both literally and metaphorically, where the mind can ponder the mysteries of existence.",
-    "As day turns to night, the pond becomes a celestial canvas. Stars overhead are mirrored in the water below, creating a dreamscape that blurs the boundaries between earth and sky.",
-    "Frogs add their voices to the nocturnal chorus, their croaks creating a rhythmic melody. It's a serenade that lulls the forest to sleep, a lullaby sung by the denizens of the night.",
-    "Under the moon's gentle glow, the forest takes on a mystical aura. Shadows dance, and the night is alive with the enchantment of the unseen. It's a realm where imagination takes flight.",
-    "In the heart of the forest, a towering waterfall cascades down moss-covered rocks. The sound of rushing water is a symphony that echoes through the trees, a melody that resonates with the power of nature.",
-    "Mist rises from the base of the waterfall, creating an ethereal veil that shrouds the surroundings. It's a place of raw beauty, where the elements converge to form a breathtaking tableau.",
-    "Rainbows dance in the mist, adding a touch of magic to the scene. It's a fleeting moment of brilliance, a reminder that even in the midst of the wild, nature is an artist that paints with a vibrant palette.",
-    "Surrounding the waterfall, ferns and moss thrive in the perpetual moisture. They are like nature's tapestry, weaving green threads into the fabric of the landscape.",
-    "The air is charged with negative ions, invigorating those who stand in the waterfall's embrace. It's a sensory experience that goes beyond sight and sound, a baptism in the energy of the natural world.",
-    "In the heart of the forest, ancient ruins lie hidden among the trees. Weathered stones bear the marks of time, and moss-covered pillars stand as silent sentinels to a forgotten era.",
-    "Nature has reclaimed these remnants, intertwining with the stones in a dance of decay and renewal. Vines creep up the walls, and the echoes of the past linger in the air.",
-    "The ruins tell a story of a civilization long gone, leaving behind only traces of its existence. It's a narrative written in stone, inviting those who stumble upon it to imagine the lives that once thrived in this mystical place.",
-    "As sunlight filters through the canopy, it illuminates the ruins with a soft glow. Shadows play on the weathered surfaces, creating a chiaroscuro effect that adds to the air of mystery.",
-    "Among the stones, wildflowers bloom, adding a touch of color to the ancient monochrome. It's a testament to nature's ability to find beauty even in the midst of decay.",
-    "In the heart of the forest, a hidden glade bathes in the soft glow of sunlight filtering through the leaves. Butterflies flit about, their delicate wings carrying them from bloom to bloom.",
-    "The glade is a secret haven, a sanctuary for those seeking a moment of respite. The grass beneath bare feet is cool and inviting, inviting wanderers to linger and soak in the tranquility.",
-    "Floral scents waft through the air, creating an olfactory tapestry that complements the visual feast. It's a sensory experience that heightens the connection to the natural world.",
-    "As the day unfolds, the glade becomes a stage for the dance of light and shadow. Sunbeams create patterns on the ground, and the rustle of leaves adds a gentle percussion to the symphony of nature.",
-    "In the heart of the forest, an ancient tree stands as a silent sentinel. Its gnarled branches reach towards the sky, each one a testament to the passage of centuries.",
-    "The tree's roots, like fingers digging into the earth, anchor it to the ground. They tell a story of resilience, of a life deeply intertwined with the soil beneath.",
-    "Moss clings to the bark, creating a tapestry of green that adds to the tree's timeless beauty. It's a symbiotic relationship, a dance between the living and the nonliving.",
-    "Birds find refuge in the tree's branches, their songs becoming part of the tree's story. It's a collaboration between the flora and the fauna, a harmony that resonates through the forest.",
-    "Underneath the tree's expansive canopy, a sense of quiet reverence fills the air. It's a space where time seems to slow, and the whispers of the wind carry ancient tales.",
-    "In the heart of the forest, a network of trails weaves through the undergrowth. Each path is a choice, a decision to explore and discover the wonders hidden within the green labyrinth.",
-    "Sunlight filters through the leaves, casting a dappled pattern on the forest floor. It's a guide for those who traverse the trails, a natural navigation system that leads to new revelations.",
-    "Occasional clearings offer glimpses of the sky, a reminder of the vastness beyond the trees. It's a moment to pause, to appreciate the beauty of the natural world from different perspectives.",
+  "Deep within the heart of an expansive forest, a breathtaking expanse of emerald greenery unfolds, creating a sanctuary that beckons to nature lovers from all walks of life. The dense foliage, a vibrant tapestry of life, stands as a testament to the incredible biodiversity thriving within this enchanted realm. Hiking trails, winding like ancient veins through the verdant expanse, offer a journey of discovery, revealing hidden clearings adorned with vibrant wildflowers and the gentle murmur of babbling brooks. As one ventures deeper into this sylvan oasis, the air becomes thick with the earthy scent of moss-covered rocks, inviting explorers to immerse themselves in the timeless beauty of nature's grandeur.",
+  
+  "A majestic river, its meandering course tracing the contours of the forest, becomes a reflective canvas mirroring the celestial drama above. Towering trees, their branches entwined in a natural ballet, form an intricate canopy that bathes the forest floor in a soft, diffused light. This serene ambiance creates an idyllic setting for both the resident flora and fauna, fostering an ecosystem where life flourishes in symbiotic harmony. The melodious symphony of bird songs intertwines with the gentle rustling of leaves, creating a captivating soundtrack that resonates through the very core of this enchanting woodland.",
+  
+  "Within this wilderness utopia, the delicate dance of flora and fauna unfolds in a mesmerizing display of interconnected existence. Graceful deer, their movements choreographed with elegance, graze peacefully in sun-dappled meadows, while nimble squirrels embark on acrobatic adventures among the branches, diligently preparing for the inevitable arrival of winter. This intricate ballet, orchestrated by nature itself, showcases the delicate balance that defines this pristine ecosystem. Each creature, from the smallest insect to the majestic deer, contributes to the harmonious rhythm that sustains the delicate equilibrium of life in the forest.",
+  
+  "Moss-covered rocks, standing stoically along the riverbanks, bear witness to the passage of time. A vivid array of wildflowers, each petal painted with nature's brush, injects the landscape with bursts of color amidst the verdant green. Nature's palette, a masterpiece of greens, browns, and occasional bursts of red or purple, captivates the senses, offering a visual feast that changes with the rhythm of the seasons. As sunlight filters through the dense foliage, creating ever-shifting patterns of light and shadow, the forest becomes a living canvas, constantly evolving with the dance of the elements.",
+  
+  "Inhale deeply, and the air becomes a symphony of fragrances—a sweet melange of blooming flowers and the earthy aroma of the forest floor. Each step upon the soft soil is a connection to an ancient rhythm, a dance that has unfolded for centuries. Birdsong resonates through the air, a harmonious symphony created by a diverse array of species, inviting contemplation and a deep sense of connection to the natural world. The forest, in all its majestic splendor, is not just a collection of trees and wildlife; it is a living, breathing entity, inviting those who enter to become part of its timeless narrative.",
+  
+  "Birdsong, a melodic tapestry woven by various avian residents, becomes an auditory masterpiece as different species contribute their unique melodies to the overall symphony. The harmonious chorus creates a soothing atmosphere, where the stresses of the outside world seem to dissipate. The vibrant calls of songbirds, the rhythmic tapping of woodpeckers, and the occasional hoot of an owl at dusk all contribute to the intricate soundscape that envelops the forest. It's a timeless performance, a concert of nature that unfolds with the rising and setting of the sun, captivating all who lend their ears to this enchanting auditory spectacle.",
+  
+  "As the sun begins its descent, casting a warm golden glow across the forest, the landscape undergoes a magical transformation. Fireflies emerge like living stars, casting their ethereal glow, turning the forest into a fairy-tale realm. The night comes alive with the calls of nocturnal creatures, their voices echoing through the darkness. The moon, a silvery orb in the night sky, filters through the dense canopy, casting enchanting shadows on the forest floor. It's a transition from the vibrant hues of daytime to the mysterious allure of the night, a metamorphosis that adds another layer to the rich tapestry of the woodland sanctuary.",
+  
+  "For those who seek solace in the embrace of nature, the forest is not merely a collection of trees and animals but a sacred space that provides not only beauty but also a profound sense of connection to the planet we call home. Each step on the forest floor is a step back in time, a communion with the ancient pulse of the earth. The towering oak trees, with their gnarled branches and thick trunks, stand as silent witnesses to the passage of time, each ring within their bark a chapter in the story of the forest's enduring existence.",
+  
+  "The whispering wind, a carrier of tales from centuries past, weaves through the leaves, creating a symphony of nature's whispers. The leaves that carpet the forest floor are like pages from a forgotten book, each one telling a story of the changing seasons, of life and decay. Nature, in its infinite wisdom, becomes the storyteller, and those who pause to listen can hear the echoes of bygone eras. The wind carries with it the essence of the forest, a timeless narrative that has been inscribed in the very fabric of the woodland sanctuary.",
+  
+  "Mushrooms, their caps displaying an array of shapes and colors, dot the forest landscape like miniature sentinels. They are guardians of the secrets hidden beneath the soil, their presence signaling the intricate web of life that exists beneath the surface. Each mushroom, with its unique characteristics, adds to the diversity of the forest floor, creating a living mosaic that is both intricate and awe-inspiring. As sunlight filters through the canopy, illuminating these fungal wonders, they stand as testaments to the resilience and interconnectedness of all living things.",
+  
+  "Rays of sunlight, filtering through the dense foliage, create a mesmerizing dance of light and shadow on the forest floor. It's a visual symphony, a choreography of nature that unfolds with the changing angles of the sun. The interplay of light creates a dynamic and ever-changing canvas, where patterns shift with the gentle sway of leaves in the breeze. It's a dance that captivates the senses, inviting observers to become part of the intricate play between sunlight and shadow that defines the daily life of the forest.",
+  
+  "A babbling brook, its crystal-clear waters meandering through the heart of the forest, becomes a lifeline that sustains the ecosystem. Stones beneath the surface form a mosaic, and aquatic plants sway gently in the current, creating a dynamic underwater landscape. The soothing sound of running water provides a constant backdrop, a melody that complements the symphony of the forest. As the brook winds its way through the woodland sanctuary, it becomes a source of life and vitality, offering sustenance to both flora and fauna that depend on its pristine waters.",
+  
+  "The forest beckons explorers to wander its winding trails, enticing them to discover the wonders that lie hidden around every bend. It is a place of mystery and discovery, where the curious are rewarded with glimpses of nature's marvels. Each trail is a thread in the intricate tapestry of the forest, leading adventurers to secret clearings, bubbling springs, and panoramic viewpoints that offer breathtaking vistas. The journey through the forest becomes a quest for knowledge and connection, as each step unveils new facets of the woodland sanctuary.",
+  
+  "In the stillness of dawn, the forest is draped in a delicate mist, creating an otherworldly atmosphere. The world awakens with the soft rustle of leaves and the first calls of awakening birds. The mist, like a veil between realms, adds a sense of mystery to the landscape, transforming the familiar into the extraordinary. It's a time of quiet contemplation, where the transition from night to day is a gentle awakening that stirs both the woodland creatures and the spirit of those fortunate enough to witness this magical moment.",
+  
+  "As the day progresses, the forest comes alive with activity, each creature playing its role in the intricate tapestry of life. Squirrels scurry up tree trunks, and birds flit from branch to branch, their vibrant feathers creating flashes of color against the green backdrop. The meadows are carpeted with wildflowers, creating a patchwork quilt of colors that adds to the visual symphony of the forest. Bees, diligently collecting nectar, buzz from blossom to blossom, contributing to the ongoing cycle of pollination and life.",
+  
+  "The canopy above, a mosaic of leaves filtering the sunlight, bathes the forest in a gentle, golden glow. It's a cathedral of nature, where every rustle and chirp is a hymn to the beauty of the world. The towering trees, with their branches reaching towards the sky, become pillars in this natural sanctuary, providing shelter to the myriad creatures that call the forest home. The intricate network of branches and leaves forms a living architecture that stands as a testament to the resilience and grandeur of the natural world.",
+  
+  "At twilight, the forest undergoes a transformation, and the symphony of daytime gives way to the nocturnal serenade. Owls hoot in the distance, and the moon casts an ethereal glow over the landscape. Shadows lengthen, and the forest takes on a different character. Fireflies emerge, their bioluminescent glow adding an enchanting quality to the already magical scene. The transition from day to night becomes a seamless blending of two worlds, where the diurnal and nocturnal inhabitants of the forest share the stage in a celestial dance.",
+  
+  "Under the moonlight, the forest becomes a realm of dreams. Creatures of the night, previously concealed in the shadows, emerge from their hiding places, adding an air of enchantment to the already magical landscape. The rustling leaves and the croaking of frogs create a lullaby that serenades the forest to sleep. It's a timeless cycle, a dance of nature that continues unabated, where the night becomes a canvas painted with the silver brushstrokes of moonlight, and the stars twinkle overhead like distant lanterns illuminating the forest's dreamlike expanse.",
+  
+  "The stars, countless pinpricks of light in the velvet sky, twinkle overhead, and the forest, now bathed in moonlight, becomes a tranquil sanctuary. It's a place where the beauty of the natural world takes center stage, inviting all who enter to become part of its timeless story. The ancient trees, with their gnarled branches, stand as silent sentinels, guardians of the secrets hidden within their bark. The celestial theater above becomes a mesmerizing spectacle, where constellations tell stories written in the stars, and the night sky becomes a tapestry of wonder.",
+  
+  "A stroll through this enchanted forest is more than a mere walk; it is a journey through time, a communion with the earth's ancient spirit. The towering trees, their branches forming a cathedral of green, create a majestic backdrop for this pilgrimage. Sunlight filters through the leaves, creating a soft glow that bathes the surroundings in a warm embrace. The trails wind through the undergrowth, revealing hidden wonders at every turn, and each step becomes a deliberate connection with the land, a reminder that, in the midst of our modern lives, the heartbeat of nature continues to echo, steady and enduring.",
+  
+  "As the sun rises once more, casting its warm rays upon the treetops, the forest awakens to a new day. The cycle begins anew, and the symphony of nature plays on. The rustle of leaves, the call of distant birds, and the gentle gurgle of the brook create a soundtrack that accompanies every step. It's a melody that speaks to the soul, a song of the wild that invites all who enter to become part of the ongoing narrative of the forest. The sunrise becomes a symbol of renewal, a promise that each day brings a new chapter in the ever-evolving story of this enchanted woodland.",
+  
+  "Among the towering trees and the vibrant undergrowth, every creature plays a role in the intricate tapestry of life. From the smallest insects that scuttle about, diligently tending to their tasks, to the majestic deer that gracefully traverse the meadows, each contributes to the harmony of the ecosystem. The forest, with its myriad shades of green and the soft carpet of fallen leaves, is a sanctuary for contemplation. It's a place where the mind finds respite from the noise of the world, and the heart beats in sync with the rhythm of nature, as if in a primal dance.",
+  
+  "Moss-covered rocks, adorned with delicate ferns, add to the enchantment of the forest floor. They are like stepping stones in a magical realm, inviting explorers to traverse the landscape with wonder-filled eyes. Each rock, weathered by time and embraced by nature, becomes a storyteller, recounting the eons it has witnessed. The air is cool and crisp, scented with the fragrance of pine and earth. It's a perfume that lingers in the memory, a reminder of the simple joys found in the embrace of the great outdoors, where every step is a revelation and every corner holds the promise of discovery.",
+  
+  "The forest floor, with its patches of sunlight and shadows, is a canvas for the intricate dance of life. Insects scuttle about, their movements creating a microcosmic ballet. The occasional rustle betrays the presence of unseen creatures, adding an element of mystery to the landscape. It's a world within a world, where the smallest details become the building blocks of the forest's intricate mosaic. As the day progresses, the play of light and shadow becomes a dynamic performance, a visual feast for those who pause to observe the nuances of this living tapestry.",
 ];
 
 const wordNumberParagraphs = [
@@ -242,7 +219,7 @@ const wordNumberPunctuationParagraphs = [
     "In the bustling market, a vendor offered a collection of 39 handmade rugs, each a unique masterpiece of craftsmanship and design. The vibrant patterns and intricate details showcased the artistry of cultures that spanned continents.",
 ];
 
-const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstStart, isEsc, onCompletion, isEnter, setIsEnter }) => {
+const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstStart, isEsc, onCompletion, isEnter, setIsEnter, isCustomSec, setIsCustomSec }) => {
   const [para, setPara] = useState("");
   const [countDown, setCountDown] = useState(isTimer);
   const [lastTypedChar, setLastTypedChar] = useState("");
@@ -257,7 +234,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCountDown((prevCountDown) => {
-        if (prevCountDown === 1) {
+        if (prevCountDown === -1) {
           clearInterval(intervalRef.current);
           setCompleted(true);
           return 0;
@@ -278,13 +255,13 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     const randomNumber = Math.floor(Math.random() * 20);
 
     if (isNumber && isPunctuation) {
-      setPara(wordNumberPunctuationParagraphs[randomNumber].split(" ").slice(0, 50).join(" "));
+      setPara(wordNumberPunctuationParagraphs[randomNumber].split(" ").slice(0, 200).join(" "));
     } else if (isPunctuation) {
-      setPara(wordPunctuationParagraphs[randomNumber].split(" ").slice(0, 50).join(" "));
+      setPara(wordPunctuationParagraphs[randomNumber].split(" ").slice(0, 100).join(" "));
     } else if (isNumber) {
-      setPara(wordNumberParagraphs[randomNumber].split(" ").slice(0, 50).join(" "));
+      setPara(wordNumberParagraphs[randomNumber].split(" ").slice(0, 100).join(" "));
     } else {
-      setPara(wordParagraphs[randomNumber].split(" ").slice(0, 50).join(" "));
+      setPara(wordParagraphs[randomNumber].split(" ").slice(0, 200).join(" "));
     }
 
     setCountDown(isTimer);
@@ -302,9 +279,8 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
   
 
   useEffect(() => {
-    // console.log("input value", inputValue);
   
-    if (countDown === 1) {
+    if (countDown === -1) {
         let correctCount = 0;
         let incorrectCount = 0;
       if (para && inputValue) {
@@ -360,6 +336,10 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     //   setIsEnter(true)
     // }
 
+    if(pressedKey === 'Enter' && isCustomSec){
+      setIsCustomSec(false)
+    }
+
     if (
       !unwantedKeys.includes(pressedKey) &&
       (/[a-zA-Z]/.test(pressedKey) || /\d/.test(pressedKey) || /[!"#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~\s]/.test(pressedKey)) &&
@@ -401,15 +381,23 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
       document.removeEventListener("keydown", handleKeyDown);
       clearInterval(intervalRef.current);
     };
-  }, [isTimer, isFirstStart, startTimer]);
+  }, [isTimer, isFirstStart, startTimer, isCustomSec]);
+
   const handleRefreshClick = () => {
     clearInterval(intervalRef.current);
     generateParas();
     setInputValue("");
     setLastTypedChar("");
-    setCursorPosition(-1); // Reset cursor position to the beginning
-    setIsEnter(false)
-  };
+    setCursorPosition(-1);
+    setIsEnter(false);
+
+    const wordsWrapper = document.querySelector(".words-wrapper");
+    wordsWrapper.scrollTop = 0;
+  }
+
+  useEffect(() => {
+    handleRefreshClick();
+  }, [isTimer])
 
   // Inside the renderWordElements function
   const renderWordElements = (cursorPosition) => {
@@ -460,14 +448,14 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
         className="input-field invisible absolute z-[-99]"
         onKeyDown={isEsc && !isEnter ? null : handleKeyDown}
         value={inputValue}
-        readOnly={!isTimer || completed}
+        readOnly={!isTimer || !isEnter || isCustomSec}
       />
       <div className={`text-[#e2b714] font-medium ${countDown > 0 && isFirstStart ? "block" : "hidden"}`}>
         <h1 className="text-xl">{countDown}</h1>
       </div>
 
-      <div className="words-wrapper w-[80vw] overfl">
-        <div className="font-Roboto words text-[#646669] text-xl tracking-[3px]">
+      <div className="words-wrapper w-[80vw] break-all overflow-hidden">
+        <div className="font-Roboto words text-[#646669] text-2xl tracking-[1px] h-[100px]">
           {renderWordElements(cursorPosition)}
         </div>
       </div>

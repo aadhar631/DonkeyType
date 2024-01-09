@@ -40,10 +40,6 @@
   overflow: hidden; /* or scroll/auto based on your design */
 }
 
-.overfl {
-  overflow-wrap: break-word; /* or word-wrap: break-word; */
-}
-
 .colorless {
   color: #646669;
 }
