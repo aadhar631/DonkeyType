@@ -54,7 +54,7 @@
                     </div>
                     <div className="group raw">
                         <div className="top">raw</div>
-                        <div className="bottom size">{wpm - iwpm}</div>
+                        <div className="bottom size">{wpm - iwpm < 0 ? 0 : wpm - iwpm}</div>
                     </div>
                     <div className="group characters">
                         <div className="top">characters</div>
@@ -72,7 +72,7 @@
 
                 <div className="links w-full flex justify-center gap-20 text-[#5e6063] text-xl">
                     <button><IoIosArrowForward className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><FiRefreshCw onClick={() => {setCompleted(false); setIsTimer(0)}} className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
+                    <button><FiRefreshCw onClick={() => {setCompleted(false); setIsTimer(-1)}} className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
                     <button><FaExclamationTriangle className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
                     <button><CgMenuLeftAlt className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
                     <button><FaBackward className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>

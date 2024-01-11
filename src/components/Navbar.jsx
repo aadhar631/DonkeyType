@@ -1,25 +1,24 @@
 import React from 'react';
-import { GiAbstract049} from 'react-icons/gi';
 import { FaRegKeyboard } from "react-icons/fa";
 import { FaChessKing } from "react-icons/fa6";
 import { IoInformation } from "react-icons/io5";
 import { IoMdSettings } from "react-icons/io";
 import { PiBellRingingFill } from "react-icons/pi";
 import { IoPersonOutline } from "react-icons/io5";
-import logo from '../assets/images/logo6_adobe.jpg'
+import logo from '../assets/images/logo.png'
 
 
 function Navbar({ isNotification, setIsNotification }) {
     return (
         <div className='w-[100%] flex items-center'>
-            <a href="/" className='flex gap-3 cursor-pointer'>
+            <a href="/" className='flex gap-1.5 cursor-pointer items-center'>
                 <div className="icon items-center">
                     {/* <GiAbstract049 style={{ width: '30px', height: '50px', color: '#E2B714' }} /> */}
-                    <img src={logo} alt="logo" className='w-[50px] h-[50px] rounded-3xl'/>
+                    <img src={logo} alt="logo" className='w-[2.5rem]'/>
                 </div>
 
                 <h1 className="text relative flex items-center text-3xl dark:text-[#d1d0c5] text-black">
-                    <div className="absolute -top-[5%] left-[5%] text-xs text-[#646669]">donkey see</div>
+                    <div className="absolute -top-[48%] left-[2%] text-[.6rem] text-[#646669]">donkey see</div>
                     <span className='font-medium'>donkeytype</span>
                 </h1>
             </a>

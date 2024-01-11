@@ -23,9 +23,9 @@ function App() {
   const [isNotification, setIsNotification] = useState(false) // To get the Notification Slide bar
   const [isCustomSec, setIsCustomSec] = useState(false) // To get the custom time from the user
   const [isEnter, setIsEnter] = useState(false)
-  const [second, setSecond] = useState(0)
+  const [second, setSecond] = useState(-1)
 
-  const [isTimer, setIsTimer] = useState(0) // To check the time starts or not
+  const [isTimer, setIsTimer] = useState(-1) // To check the time starts or not
 
   const [completed, setCompleted] = useState(false);
   const [correctCharCount, setCorrectCharCount] = useState(0);

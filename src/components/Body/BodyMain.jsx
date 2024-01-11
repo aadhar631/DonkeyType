@@ -234,7 +234,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setCountDown((prevCountDown) => {
-        if (prevCountDown === -1) {
+        if (prevCountDown === 0) {
           clearInterval(intervalRef.current);
           setCompleted(true);
           return 0;
@@ -280,7 +280,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
 
   useEffect(() => {
   
-    if (countDown === -1) {
+    if (countDown === 0) {
         let correctCount = 0;
         let incorrectCount = 0;
       if (para && inputValue) {
