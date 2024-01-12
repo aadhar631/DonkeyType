@@ -246,9 +246,9 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
     // console.log("last");
   }, []);
 
-  useEffect(() => {
-    console.log("Countdown updated:", countDown);
-  }, [countDown, completed]);
+  // useEffect(() => {
+  //   console.log("Countdown updated:", countDown);
+  // }, [countDown, completed]);
 
   const generateParas = useCallback(() => {
     clearInterval(intervalRef.current);
@@ -350,7 +350,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
 
       // Update cursor position
       setCursorPosition((prevPosition) => Math.min(prevPosition + 1, para.length));
-    } else if (event.keyCode === 13 && !isFirstStart && isTimer) {
+    } else if (event.keyCode === 13 && !isFirstStart && (isTimer > 0)) {
       setIsFirstStart(true);
       startTimer();
       setIsEnter(true)
@@ -427,7 +427,7 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
   return (
     <div className="typingTest flex flex-col gap-5">
       <div className="note text-center font-Roboto text-[#646669] text-xl">
-        <h2 className={`inline-block p-2 rounded-lg ${!isEnter && countDown ? 'animate-ping rounded-full' : ''} `}>
+        <h2 className={`inline-block p-2 rounded-lg ${(!isEnter && (countDown > 0)) ? 'animate-ping rounded-full' : ''} `}>
           Press{" "}
           <span className="px-[5px] py-[0] dark:bg-[#646669] bg-white dark:text-[#3c393f] text-black rounded-[2px]">
             ENTER
