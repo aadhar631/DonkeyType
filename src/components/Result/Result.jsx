@@ -1,12 +1,12 @@
-    import React from "react";
+    import React, {useState} from "react";
     import { IoIosArrowForward } from "react-icons/io";
     import { FiRefreshCw } from "react-icons/fi";
     import { FaExclamationTriangle } from "react-icons/fa";
     import { CgMenuLeftAlt } from "react-icons/cg";
     import { FaBackward } from "react-icons/fa6";
     import { FaImage } from "react-icons/fa";
-    import Charts from "./Charts";
-
+    import Charts from "../Result/Charts";
+    import TooltipButton from "../TooltipButton/TooltipButton";
 
     const Result = ({correctCharCount, incorrectCharCount, isTimer, setIsTimer, isNumber, isPunctuation, setCompleted}) => {
         const totalCharCount = correctCharCount + incorrectCharCount;
@@ -71,12 +71,34 @@
                 </div>
 
                 <div className="links w-full flex justify-center gap-20 text-[#5e6063] text-xl">
-                    <button><IoIosArrowForward className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><FiRefreshCw onClick={() => {setCompleted(false); setIsTimer(-1)}} className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><FaExclamationTriangle className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><CgMenuLeftAlt className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><FaBackward className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
-                    <button><FaImage className="dark:hover:text-[white] hover:text-black ease-in-out duration-300"/></button>
+                    <TooltipButton
+                    icon={<IoIosArrowForward />}
+                    tooltipText="Next test"
+                    />
+                    <TooltipButton
+                    icon={<FiRefreshCw />}
+                    tooltipText="Repeat test"
+                    onClickHandler={() => {
+                        setCompleted(false);
+                        setIsTimer(-1);
+                    }}
+                    />
+                    <TooltipButton
+                    icon={<FaExclamationTriangle />}
+                    tooltipText="Practice words"
+                    />
+                    <TooltipButton
+                    icon={<CgMenuLeftAlt />}
+                    tooltipText="Toggle words history"
+                    />
+                    <TooltipButton
+                    icon={<FaBackward />}
+                    tooltipText="Watch replay"
+                    />
+                    <TooltipButton
+                    icon={<FaImage />}
+                    tooltipText="Copy screenshot to clipboard"
+                    />
                 </div>
 
                 <div className="loginTip w-full text-center text-[#5e6063]">

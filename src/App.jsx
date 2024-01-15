@@ -5,10 +5,10 @@ import BodyMain from "./components/Body/BodyMain"
 import BodyFooter from "./components/Body/BodyFooter"
 import Footer from "./components/Footer"
 import Navbar from "./components/Navbar"
-import EscButton from "./components/Body/EscButton"
-import NotificationBar from "./components/Body/NotificationBar"
-import CustomSecond from "./components/Body/CustomSecond"
-import Result from "./components/Body/Result"
+import EscButton from "./components/EscButton/EscButton"
+import NotificationBar from "./components/NotificationBar/NotificationBar"
+import CustomSecond from "./components/CustomSecond/CustomSecond"
+import Result from "./components/Result/Result"
 
 function App() {
 
@@ -55,7 +55,7 @@ function App() {
 
   return (
     <div className={darkTheme ? 'dark' : ''}>
-      <div className="relative font-poppins w-full dark:bg-[#323437] bg-gray-300 h-screen flex flex-col justify-between py-[20px] px-[100px] items-center">
+      <div className="relative font-poppins w-full dark:bg-[#323437] bg-[#e1e1e3] h-screen flex flex-col justify-between py-[20px] px-[100px] items-center">
         <div className={`z-[999] absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] ${isEsc ? 'block' : 'hidden'}`}>
           <EscButton />
         </div>

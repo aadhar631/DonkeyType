@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { TiWorld } from "react-icons/ti";
 import { IoMdRefresh } from "react-icons/io";
+import TooltipButton from '../TooltipButton/TooltipButton';
 
 const wordParagraphs = [
   "Deep within the heart of an expansive forest, a breathtaking expanse of emerald greenery unfolds, creating a sanctuary that beckons to nature lovers from all walks of life. The dense foliage, a vibrant tapestry of life, stands as a testament to the incredible biodiversity thriving within this enchanted realm. Hiking trails, winding like ancient veins through the verdant expanse, offer a journey of discovery, revealing hidden clearings adorned with vibrant wildflowers and the gentle murmur of babbling brooks. As one ventures deeper into this sylvan oasis, the air becomes thick with the earthy scent of moss-covered rocks, inviting explorers to immerse themselves in the timeless beauty of nature's grandeur.",
@@ -461,7 +462,11 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
       </div>
 
       <div className="refresh w-100% flex justify-center text-2xl text-[#646669] cursor-pointer hover:text-black dark:hover:text-[#ededed] ease-in-out duration-300 font-medium">
-        <IoMdRefresh onClick={handleRefreshClick} />
+        <TooltipButton
+          icon={<IoMdRefresh />}
+          tooltipText="Restart test"
+          onClickHandler={handleRefreshClick}
+        />
       </div>
     </div>
   );
