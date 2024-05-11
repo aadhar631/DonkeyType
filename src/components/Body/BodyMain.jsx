@@ -401,13 +401,16 @@ const BodyMain = ({ isNumber, isPunctuation, isTimer, isFirstStart, setIsFirstSt
   return (
     <div className="typingTest flex flex-col gap-5">
       <div className="note text-center font-Roboto text-[#646669] text-xl">
-        <h2 className={`inline-block p-2 rounded-lg ${(!isEnter && (countDown > 0)) ? 'animate-ping rounded-full' : ''} `}>
-          Press{" "}
-          <span className="px-[5px] py-[0] dark:bg-[#646669] bg-white dark:text-[#3c393f] text-black rounded-[2px]">
-            ENTER
-          </span>{" "}
-          to start typing every time!!
-        </h2>
+        {countDown <= 0
+            ? <h2 className='animate-ping' >Select the Timer</h2>
+            : <h2 className={`inline-block p-2 rounded-lg ${!isEnter && (countDown > 0) ? 'animate-ping rounded-full' : 'hidden'} `}>
+            Press{" "}
+            <span className="px-[5px] py-[0] dark:bg-[#646669] bg-white dark:text-[#3c393f] text-black rounded-[2px]">
+              ENTER
+            </span>{" "}
+            to start typing every time!!
+          </h2>
+          }
       </div>
       <div className="textModesNotice w-100% flex justify-center">
         <div className="textButton font-Roboto flex items-center gap-3 text-lg text-[#646669] cursor-pointer hover:text-black dark:hover:text-[#ededed] ease-in-out duration-300">

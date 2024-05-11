@@ -92,24 +92,24 @@
 }
 
 .correct-char {
-  color: white;
+  color: #d1d0c5;
 }
 
 .incorrect-char {
   color: red;
 }
 .blinking-cursor {
-  animation: blinkCursor 3s infinite;
+  animation: blinkCursor 3s infinite ease-in-out;
 }
 
 .active-char {
-  border-right: 2px solid #ffff00; /* Set the border color for the active character */
-  animation: blinkBorder 0.8s infinite;
+  border-right: 2px solid #e2b714; /* Set the border color for the active character */
+  animation: blinkBorder 1.5s infinite ease-in-out;
 }
 
 @keyframes blinkBorder {
   50% {
-    border-color: transparent;
+    border-color: transparent; 
   }
 }
 

@@ -17,12 +17,12 @@ const Footer = ({ darkTheme, setDarkTheme }) => {
 
         <div className="flex justify-center items-center ml-[15px] text-[#646669] hover:text-black dark:hover:text-white cursor-pointer transition-all ease-in-out duration-500">
           <MdContactSupport className='text-[15px]' />
-          <h1 className="ml-[5px] text-[15px]">Support</h1>
+          <a target="_blank" href="https://www.linkedin.com/in/aadhar-jain-243a71299/" className="ml-[5px] text-[15px]">LinkedIn</a>
         </div>
 
         <div className="flex justify-center items-center ml-[15px] text-[#646669] hover:text-black dark:hover:text-white cursor-pointer transition-all ease-in-out duration-500">
           <FaCode className='text-[15px]' />
-          <h1 className="ml-[5px] text-[15px]">Github</h1>
+          <a target="_blank" href="https://github.com/aadhar631" className="ml-[5px] text-[15px]">Github</a>
         </div>
 
         <div className="flex justify-center items-center ml-[15px] text-[#646669] hover:text-black dark:hover:text-white cursor-pointer transition-all ease-in-out duration-500">
