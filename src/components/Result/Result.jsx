@@ -16,6 +16,37 @@
         const accuracy = Math.floor((correctCharCount / (totalCharCount)) * 100) || 0;
         const consistency = Math.floor((correctCharCount / (incorrectCharCount === 0 ? totalCharCount : totalCharCount + incorrectCharCount)) * 100) || 0;
 
+        // useEffect(() => {
+        //     const sendDataToBackend = async () => {
+        //         try {
+        //             const response = await fetch('/api/results', {
+        //             method: "POST",
+        //             headers: {
+        //                 "Content-Type": "application/json",
+        //             },
+        //             body: JSON.stringify({
+        //                 wpm,
+        //                 accuracy,
+        //                 consistency,
+        //                 isTimer,
+        //             }),
+        //             });
+
+        //             console.log(response);
+            
+        //             if (response.ok) {
+        //             console.log("Data sent successfully");
+        //             } else {
+        //             console.log("Failed to send data to backend");
+        //             }
+        //         } catch (error) {
+        //             console.error(error);
+        //         }
+        //     };
+            
+        //     sendDataToBackend();
+        // }, [wpm, accuracy, consistency, isTimer]);
+
         return (
             <div className="font-Roboto total-result w-full bg-transparent flex flex-col gap-7">
                 <div className="result flex gap-10">
